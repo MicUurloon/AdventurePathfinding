@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project version="2">
+  <!-- Output SWF options -->
+  <output>
+    <movie outputType="CustomBuild" />
+    <movie input="" />
+    <movie path="" />
+    <movie fps="0" />
+    <movie width="0" />
+    <movie height="0" />
+    <movie version="1" />
+    <movie minorVersion="0" />
+    <movie platform="flow" />
+    <movie background="#000000" />
+  </output>
+  <!-- Other classes to be compiled into your SWF -->
+  <classpaths>
+    <class path="C:\HaxeToolkit\haxe\lib\luxe\git" />
+    <class path="C:\HaxeToolkit\haxe\lib\snow\git" />
+    <class path="src" />
+    <class path="bin\web.build\haxe" />
+  </classpaths>
+  <!-- Build options -->
+  <build>
+    <option directives="no-compilation&#xA;web&#xA;arch-web&#xA;source-map-content&#xA;hxcpp_static_std&#xA;snow_module_audio_howlerjs&#xA;luxe_web&#xA;snow_web&#xA;luxe&#xA;snow" />
+    <option flashStrict="False" />
+    <option noInlineOnDebug="False" />
+    <option mainClass="LuxeApp" />
+    <option enabledebug="False" />
+    <option additional="-resource version@version&#xA;-resource build@build&#xA;-resource phoenix/defaults/shaders/vert.glsl@default.vert.glsl&#xA;-resource phoenix/defaults/shaders/frag.glsl@default.frag.glsl&#xA;-resource phoenix/defaults/shaders/frag.textured.glsl@default.frag.textured.glsl&#xA;-resource phoenix/defaults/shaders/frag.bitmapfont.glsl@default.frag.bitmapfont.glsl&#xA;-resource luxe/defaults/fonts/default.png@default.png&#xA;-resource luxe/defaults/fonts/default.fnt@default.fnt&#xA;--macro snow.system.module.Module.set(&quot;Audio&quot;,&quot;snow.core.web.audio.Audio&quot;)&#xA;--macro snow.system.module.Module.set(&quot;IO&quot;,&quot;snow.core.web.io.IO&quot;)&#xA;--macro snow.system.module.Module.set(&quot;Input&quot;,&quot;snow.core.web.input.Input&quot;)&#xA;--macro snow.system.module.Module.set(&quot;Windowing&quot;,&quot;snow.core.web.window.Windowing&quot;)&#xA;--macro snow.system.module.Module.set(&quot;Assets&quot;,&quot;snow.core.web.assets.Assets&quot;)&#xA;--macro snow.system.module.Module.set(&quot;Audio&quot;,&quot;snow.modules.howlerjs.Audio&quot;)" />
+  </build>
+  <!-- haxelib libraries -->
+  <haxelib>
+    <!-- example: <library name="..." /> -->
+  </haxelib>
+  <!-- Class files to compile (other referenced classes will automatically be included) -->
+  <compileTargets>
+    <compile path="src\Main.hx" />
+  </compileTargets>
+  <!-- Paths to exclude from the Project Explorer tree -->
+  <hiddenPaths>
+    <hidden path="obj" />
+  </hiddenPaths>
+  <!-- Executed before build -->
+  <preBuildCommand>"$(CompilerPath)/haxelib" run flow build $(TargetBuild) --$(BuildConfig)</preBuildCommand>
+  <!-- Executed after build -->
+  <postBuildCommand alwaysRun="False" />
+  <!-- Other project options -->
+  <options>
+    <option showHiddenPaths="False" />
+    <option testMovie="Custom" />
+    <option testMovieCommand="" />
+  </options>
+  <!-- Plugin storage -->
+  <storage />
+</project>
