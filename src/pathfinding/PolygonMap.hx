@@ -40,7 +40,7 @@ class PolygonMap
 
 		// In LOS if it's the same start and end location
 		if (Vector.Subtract(start, end).length < epsilon) {
-			return false;
+			return true;
 		}
 	
 		// Not in LOS if any edge is intersected by the start-end line segment
